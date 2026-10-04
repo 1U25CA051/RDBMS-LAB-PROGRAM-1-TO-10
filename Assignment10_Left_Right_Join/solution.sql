@@ -1,13 +1,24 @@
 DROP DATABASE IF EXISTS CollegeDB;
 CREATE DATABASE CollegeDB;
 USE CollegeDB;
+use Ajay;
 
--- Create Course
+create table Cource(courcelD int(10), courcename varchar(20),
 
--- Create Enrollment
+credits int(5));
 
--- Insert sample records
+insert into Cource values(201,"Database systems",4), (202,"Data structures",3), (203,"Mathematics", 4);
 
--- LEFT JOIN
+create table Enrollment(enrollmentID int(5), studentID
 
--- RIGHT JOIN
+int(10), courselD int(10));
+
+insert into Enrollment values(1,1001,201), (2,1001,202),
+
+(3,1002,203), (4,1003,201);
+
+select Cource.courcelD, Cource.courcename, Cource.credits from
+
+Cource right join Enrollment on
+
+Cource.courceID=Enrollment.courseID;
