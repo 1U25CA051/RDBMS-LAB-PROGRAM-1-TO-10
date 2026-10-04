@@ -1,12 +1,26 @@
 DROP DATABASE IF EXISTS CollegeDB;
 CREATE DATABASE CollegeDB;
 USE CollegeDB;
+ create database Ajay;
 
+use Ajay;
 
--- Create Department
+create table Department(DepartmentID int(10) PRIMAk KEY, Departmentname varchar(50));
 
--- Create Student
+insert into Department values(101, "Computer Science"),
 
--- Insert sample records
+(102,"Mathematics"), (103,"Science");
 
--- INNER JOIN query
+create table Student (StudentID int(10) PRIMARY KEY,Studentname
+
+varchar(20), DepartmentID int(10));
+
+insert into Student values (1001,"Arun", 101), (1002,"Divya", 102),
+
+(1003,"Karthik", 101), (1004,"Nisha", 103);
+
+Select Student. StudentID, Student. Studentname,
+
+Department.Departmentname from Student INNER JOIN
+
+Department on Student.DepartmentID-Department.departmentID;
