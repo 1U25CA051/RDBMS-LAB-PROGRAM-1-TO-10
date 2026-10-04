@@ -10,10 +10,6 @@ CREATE TABLE Student(
     DepartmentID INT(5)
 );
 
--- Alter Student table
+use college DB;
 
--- Add Email
-
--- Add PhoneNumber
-
--- Display structure
+ALTER table Student add (email varchar(30), phonenumber int(10)); desc Student
